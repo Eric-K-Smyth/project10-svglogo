@@ -18,19 +18,19 @@ async function promptUserForInput() {
         return value.length > 0 && value.length <= 3 ? true : "Please enter up to three characters.";
       },
     },
-    {
+    {//Sets text color
       type: "list",
       name: "textColor",
       message: "Select the text color:",
       choices: colorChoices,
     },
-    {
+    {//sets shape
       type: "list",
       name: "shape",
       message: "Select a shape for the logo:",
       choices: shapeChoices,
     },
-    {
+    {//sets shape color
       type: "list",
       name: "shapeColor",
       message: "Select the shape color:",
@@ -78,9 +78,9 @@ async function promptUserForInput() {
       // Save the SVG string to a file named logo.svg
       fs.writeFileSync("logo.svg", svgString);
   
-      console.log("Generated logo.svg");
+      console.log("Generated logo.svg"); //gives completed message
     } catch (error) {
-      console.error("Error generating the logo:", error);
+      console.error("Error generating the logo:", error); //gives error message
     }
   }
   
