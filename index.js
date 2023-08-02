@@ -66,7 +66,7 @@ async function promptUserForInput() {
   
     // Combine the shapeSVG with the text SVG
     const textSVG = `<text x="50" y="100" fill="${userChoices.textColor}" font-size="50">${userChoices.text}</text>`;
-    const svgString = `<svg width="300" height="200">${shapeSVG}${textSVG}</svg>`;
+  const svgString = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${shapeSVG}${textSVG}</svg>`;
   
     return svgString;
   }
